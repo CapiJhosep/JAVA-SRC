@@ -45,9 +45,9 @@ public class frm08 extends JFrame {
 		lbl3.setBounds(110, 110, 85, 30);
 		getContentPane().add(lbl3);
 		
-		JLabel lblPromedio = new JLabel("Propina : ");
-		lblPromedio.setBounds(110, 150, 85, 30);
-		getContentPane().add(lblPromedio);
+		JLabel lblPropina = new JLabel("Propina : ");
+		lblPropina.setBounds(110, 150, 85, 30);
+		getContentPane().add(lblPropina);
 		
 		txt1 = new JTextField();
 		txt1.setHorizontalAlignment(SwingConstants.RIGHT);
