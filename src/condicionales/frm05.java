@@ -27,9 +27,6 @@ public class frm05 extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public frm05() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 300, 250);
