@@ -63,7 +63,7 @@ public class frm18 extends JFrame {
 	}
 
 	private void btnCalcular_actionPerformed() {
-		double monto = Double.parseDouble(txtMonto.getText());
+		double monto = Integer.parseInt(txtMonto.getText());
 		double salud = 0;
 		double bolsa = 0;
 		double comedor = 0;
