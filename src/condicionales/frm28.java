@@ -79,19 +79,19 @@ public class frm28 extends JFrame {
 		if (hora >= 0 && hora <= 24) {
 			if (hora == 0) {
 				hora2 = 12;
-				periodo = "AM";
+				periodo = "AM"	;
 			}
 			else if (hora < 12) {
 				hora2 = hora;
-				periodo = "AM";
+				periodo = "AM"	;
 			}
 			else if (hora == 12) {
 				hora2 = 12;
-				periodo = "PM";
+				periodo = "PM"	;
 			}
 			else {
 				hora2 = hora - 12;
-				periodo = "PM";
+				periodo = "PM"	;
 			}	
 			
 			txtHora2.setText(Integer.toString(hora2));
