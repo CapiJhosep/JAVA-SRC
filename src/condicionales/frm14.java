@@ -81,7 +81,7 @@ public class frm14 extends JFrame {
 		else descuento = 5;
 		
 		txaRpta.setText("");
-		txaRpta.append(String.format("# de Tarjeta: \tS/%d\n", numero));
+		txaRpta.append(String.format("# de Tarjeta: \t%d\n", numero));
 		txaRpta.append(String.format("Monto: \tS/%.2f \n", monto));
 		txaRpta.append(String.format("Descuento: \tS/%.2f\n", descuento));
 		
