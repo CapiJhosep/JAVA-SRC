@@ -29,10 +29,10 @@ public class frm01 extends JFrame {
     }
 
     public frm01() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(0, 0, 400, 300);
-        setLayout(null);
-        setLocationRelativeTo(null);
+    	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 400, 300);
+		getContentPane().setLayout(null);
+		setLocationRelativeTo(null);
 
         JLabel lblDividendo = new JLabel("Dividendo : ");
         lblDividendo.setBounds(100, 30, 100, 30);
