@@ -58,12 +58,12 @@ public class frm10 extends JFrame {
 
         btnCalcular.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                btnGenerar_actionPerformed();
+                btnCalcular_actionPerformed();
             }
         });
     }
 
-    protected void btnGenerar_actionPerformed() {
+    protected void btnCalcular_actionPerformed() {
         StringBuilder resultado = new StringBuilder();
         int cantidad = 0;
 

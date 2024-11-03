@@ -10,19 +10,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 
-public class frm09 extends JFrame {
+public class frm11 extends JFrame {
     private static final long serialVersionUID = 1L;
-    JTextField txtAltura;
     JTextArea txaRpta;
+    JLabel lblCantidad;
 
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    frm09 frame = new frm09();
+                    frm11 frame = new frm11();
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -31,32 +29,30 @@ public class frm09 extends JFrame {
         });
     }
 
-    public frm09() {
+    public frm11() {
     	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 400, 300);
 		setLayout(null);
 		setLocationRelativeTo(null);
 
-        JLabel lblAltura = new JLabel("Altura : ");
-        lblAltura.setBounds(100, 20, 120, 30);
-        getContentPane().add(lblAltura);
+        JLabel lblTitulo = new JLabel("Números capicúas de 3 cifras: ");
+        lblTitulo.setBounds(70, 20, 300, 30);
+        getContentPane().add(lblTitulo);
 
-        txtAltura = new JTextField();
-        txtAltura.setBounds(180, 20, 70, 30);
-        txtAltura.setHorizontalAlignment(SwingConstants.RIGHT);
-        txtAltura.setMargin(new Insets(5, 5, 5, 5));
-        getContentPane().add(txtAltura);
+        lblCantidad = new JLabel("Cantidad : ");
+        lblCantidad.setBounds(80, 170, 300, 30);
+        getContentPane().add(lblCantidad);
 
         txaRpta = new JTextArea();
 		txaRpta.setFocusable(false);
 		txaRpta.setMargin(new Insets(5, 5, 5, 5));
 		
 		JScrollPane scrollPane = new JScrollPane(txaRpta);
-		scrollPane.setBounds(90, 60, 190, 150);
+		scrollPane.setBounds(70, 60, 200, 100);
 		getContentPane().add(scrollPane);
 
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(150, 220, 100, 30);
+        btnCalcular.setBounds(140, 220, 100, 30);
         btnCalcular.setMnemonic('a');
         getContentPane().add(btnCalcular);
 
@@ -68,22 +64,20 @@ public class frm09 extends JFrame {
     }
 
     protected void btnCalcular_actionPerformed() {
-        int altura = Integer.parseInt(txtAltura.getText());
-        if (altura < 4) {
-            txaRpta.setText("La altura debe ser mayor o igual a 4.");
-            return;
-        }
-
-        int ancho = 2 * altura;
         StringBuilder resultado = new StringBuilder();
+        int cantidad = 0;
 
-        for (int i = 0; i < altura; i++) {
-            for (int j = 0; j < ancho; j++) {
-                resultado.append("*");
+        for (int i = 100; i <= 999; i++) {
+            int centena = i / 100;
+            int unidad = i % 10;
+
+            if (centena == unidad) {
+                resultado.append(i).append("\n");
+                cantidad++;
             }
-            resultado.append("\n");
         }
 
         txaRpta.setText(resultado.toString());
+        lblCantidad.setText("Cantidad: " + cantidad);
     }
 }
