@@ -59,7 +59,7 @@ public class frm08 extends JFrame {
         getContentPane().add(txtBase);
 
         txtLogaritmo = new JTextField();
-        txtLogaritmo.setBounds(180, 110, 150, 30);
+        txtLogaritmo.setBounds(180, 110, 70, 30);
         txtLogaritmo.setFocusable(false);
         txtLogaritmo.setHorizontalAlignment(SwingConstants.RIGHT);
         txtLogaritmo.setMargin(new Insets(5, 5, 5, 5));
@@ -78,22 +78,22 @@ public class frm08 extends JFrame {
     }
 
     private void btnCalcular_actionPerformed() {
-		double numero = Double.parseDouble(txtNumero.getText());
-		double base = Double.parseDouble(txtBase.getText());
+            double numero = Double.parseDouble(txtNumero.getText());
+            double base = Double.parseDouble(txtBase.getText());
 
-		double resultado = logaritmoRec(numero, base);
+            double resultado = logaritmoRec(numero, base);
 
-		if (resultado == -1) {
-    		txtLogaritmo.setText("Error");
-		}
-		else { 
-    		txtLogaritmo.setText(String.valueOf(resultado));
-		}
+            if (resultado == -1) {
+                txtLogaritmo.setText("Error");
+            } else {
+                txtLogaritmo.setText(String.valueOf(resultado));
+            }
     }
+    
 
     public static double logaritmoRec(double a, double b) {
         if (b <= 0 || b == 1) {
-            System.out.println("Base > 0 y diferente de 1.");
+            System.out.println("La base debe ser mayor que 0 y diferente de 1.");
             return -1; 
         } else {
             return Math.log(a) / Math.log(b);
